@@ -1,8 +1,8 @@
 <?php
 
-namespace StromHCF\claims;
+namespace StromHCF\ranks;
 
-class ClaimsManager 
+class RanksManager 
 {
     
     public static Config $config;
@@ -14,7 +14,7 @@ class ClaimsManager
     
     public static function init()
     {
-        self::$config = new Config(Loader::getInstance()->getDataFolder()."claims.json", Config::JSON);
+        self::$config = new Config(Loader::getInstance()->getDataFolder()."ranks.json", Config::JSON);
     }
     
 }

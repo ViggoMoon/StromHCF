@@ -3,6 +3,7 @@
 namespace StromHCF;
 
 use pocketmine\plugin\PluginBase;
+use StromHCF\claims\ClaimsManager;
 use StromHCF\events\EventsManager;
 use StromHCF\factions\FactionsManager;
 
@@ -19,6 +20,7 @@ class Loader extends PluginBase
     protected function onEnable(): void
     {
         self::$instance = $this;
+        ClaimsManager::init();
         EventsManager::init();
         FactionsManager::init();
     }
