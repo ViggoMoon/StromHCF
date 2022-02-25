@@ -4,6 +4,7 @@ namespace StromHCF;
 
 use pocketmine\plugin\PluginBase;
 use StromHCF\events\EventsManager;
+use StromHCF\factions\FactionsManager;
 
 class Loader extends PluginBase
 {
@@ -19,6 +20,7 @@ class Loader extends PluginBase
     {
         self::$instance = $this;
         EventsManager::init();
+        FactionsManager::init();
     }
 
 }
