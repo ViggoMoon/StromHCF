@@ -73,5 +73,14 @@ class FactionsManager
         }
         return $count + 1;
     }
+    
+    public static function getAllFactions(): array
+    {
+        $factions = [];
+        foreach(self::getConfig()->getAll() as $faction){
+            $factions[] = $faction;
+        }
+        return $factions;
+    }
 
 }
