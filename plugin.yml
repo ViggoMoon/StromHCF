@@ -1,0 +1,5 @@
+name: StromHCF
+version: 1.0.0
+author: ViggoMoon
+api: 4.0.0
+main: StromHCF\Loader
