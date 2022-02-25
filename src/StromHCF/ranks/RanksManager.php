@@ -17,4 +17,15 @@ class RanksManager
         self::$config = new Config(Loader::getInstance()->getDataFolder()."ranks.json", Config::JSON);
     }
     
+    public static function setRank(string $playerName, string $rank)
+    {
+        self::getConfig()->set($playerName, $rank);
+        self::getConfig()->save();
+    }
+    
+    public static function getRank(string $playerName): string
+    {
+        return self::getConfig()->get($playerName);
+    }
+    
 }
