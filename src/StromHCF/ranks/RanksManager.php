@@ -14,6 +14,7 @@ class RanksManager
     
     public static function init()
     {
+        Loader::getInstance()->saveResource("ranks_settings.json");
         self::$config = new Config(Loader::getInstance()->getDataFolder()."ranks.json", Config::JSON);
     }
     

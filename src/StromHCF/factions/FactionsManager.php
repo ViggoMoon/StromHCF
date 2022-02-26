@@ -10,6 +10,7 @@ class FactionsManager
 {
     
     public static Config $config;
+    public static array $inFaction = [];
     
     public static function getConfig()
     {
@@ -53,9 +54,10 @@ class FactionsManager
         $data["Members"] = $playerName;
         self::getConfig()->set($factionName, $data);
         self::getConfig()->save();
+        self::$inFaction[$playerName] = true;
     }
     
-    public static function getMembers(string $factionName): array
+    public static function getAllMembers(string $factionName): array
     {
         $members = [];
         $members[] = self::getConfig()->get($factionName)["Leader"];
@@ -81,6 +83,12 @@ class FactionsManager
             $factions[] = $faction;
         }
         return $factions;
+    }
+    
+    public static function isInFaction(string $playerName): bool
+    {
+        if(self::$inFaction[$playerName] == true) return true;
+        return false;
     }
 
 }
