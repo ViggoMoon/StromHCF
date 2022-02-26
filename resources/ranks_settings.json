@@ -1,9 +1,10 @@
 {
-    "Owner": {
-        "format": "&7[&cOwner&7] {playerName}: {message}"
-    },
-    "Guest": {
-        "format": "&7[&aGuest&7] {playerName}: {message}",
-        "permissions": ["perms", "perm"]
-    }
+  "Owner": {
+    "format": "&7[&cOwner&7] {playerName}: {message}",
+    "permissions": []
+  },
+  "Guest": {
+    "format": "&7[&aGuest&7] {playerName}: {message}",
+    "permissions": []
+  }
 }
